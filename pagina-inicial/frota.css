@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f4f4f4;
+  color: #1f1f1f;
+}
+
+/* Cabeçalho ajustado */
+.header {
+  background: linear-gradient(to right, #fff5ee, #fff5ee);
+  padding: 20px 10px;
+  text-align: center;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Logo ajustada */
+.logo img {
+  max-width: 200px; /* Tamanho reduzido da logo */
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #ff6900;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #cd5500;
+}
+
+.squirtle {
+  text-align: center;
+  padding: 50px 20px;
+  background: linear-gradient(to bottom, #fff5ee, #fbe1cd);
+}
+
+.squirtle h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #ff6900;
+}
+
+.squirtle p {
+  color: #444;
+  margin-bottom: 20px;
+}
+
+/* Containers dos carros */
+.car-container,
+.car-container2,
+.car-container3,
+.car-container4,
+.car-container5,
+.car-container6,
+.car-container7 {
+  display: inline-block;
+  width: 30%;
+  margin: 1.5%;
+  vertical-align: top;
+}
+
+/* Cartões dos carros */
+.car-card {
+  background-color: #f5dfc9;
+  border-radius: 15px;
+  padding: 20px;
+  height: 430px; /* Altura fixa para uniformizar */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Efeito hover */
+.car-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Imagens uniformes */
+.car-card img {
+  width: 100%;
+  height: 180=px; /* Altura fixa */
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Informações do carro */
+.car-info h2 {
+  color: #ff6900;
+  margin: 10px 0 5px;
+  font-size: 1.2rem;
+}
+
+.price {
+  color: #333;
+  font-size: 1.1rem;
+  margin: 5px 0;
+}
+
+.status {
+  font-weight: bold;
+  color: green;
+  margin-bottom: 10px;
+}
+
+button {
+  background-color: #ff6900;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #e65c00;
+}
