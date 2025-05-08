@@ -1,0 +1,198 @@
+
+.car-container {
+    display: flex;
+    justify-content: left;
+    margin-left: 150px;
+    padding: 100px;
+  }
+  
+  .car-card {
+    width: 300px;
+    background-color: rgb(255, 255, 255);
+    border: 2px solid #0f0e17; 
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+  }
+  
+  .car-card:hover {
+    transform: scale(1.02);
+  }
+  
+  .car-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+  }
+  
+  .car-info {
+    padding: 15px;
+    text-align: center;
+  }
+  
+  .car-info h2 {
+    color: #000000;
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .price {
+    font-size: 16px;
+    color: #000000;
+  }
+  
+  .status {
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .available {
+    color: #ff8906;
+  }
+  
+  .car-info button {
+    background-color: #ff8906;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .car-info button:hover {
+    background-color: black;
+  }
+  
+  body{
+    font-family: Arial, sans-serif;
+  
+  }
+  
+  
+  header {
+    background-color: #1a1a1a;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+  }
+  
+   h1 {
+    justify-content: center;
+    display: flex;
+    margin-top: -127px;
+    font-size: 45px;
+    color: rgb(0, 0, 0);
+    margin-left: 150px;
+  }
+  
+  .nav-container {
+    background-color: orange; 
+    border-radius: 10px; /* Arredonda os cantos da borda */
+    padding: 10px; /* Adiciona um espaço interno */
+    display:flex
+}
+  .links{
+    justify-content: center;
+    display: flex;
+    margin-left: 100px;
+  }
+
+  
+  .logo {
+    height: 150px;
+    width: auto;
+  }
+  
+  
+  .car-container2 {
+    display: flex;
+    justify-content: center;
+    margin-top: -475px;
+    padding: 0%; }
+   
+  
+    .car-container3
+    { 
+       display: flex;
+      justify-content: right;
+      margin-right: 250px;
+      margin-top: -375px;
+      padding: 0%; }
+  
+        body{background-color: #fafafa;}
+  
+        .car-container4 { 
+          
+          display: flex;
+          justify-content: left;
+          margin-left: 150px;
+          padding: 100px;
+        }
+  
+        
+        .car-container5 {  display: flex;
+          justify-content: center;
+          margin-top: -475px;
+          padding: 0%;
+        }
+  
+        .car-container6 { display: flex;
+          justify-content: right;
+          margin-right: 250px;
+          margin-top: -375px;
+          padding: 0%;
+        }
+  
+        .car-container7 { display: flex;
+          justify-content: left;
+          margin-left: 150px;
+          padding: 100px;}
+  
+        .car-container{
+          background-image: url(fiat\ argo.img/.car-container);
+        }
+   
+  .car-container2{
+    background-image: url(onix.img/.car-container);
+  }
+  
+  .car-container3{
+    background-image: url(polo.img/.car-container);
+  }
+  
+  .car-container4{
+    background-image: url(corolla.img/.car-container);
+  }
+  
+  .car-container5{
+    background-image: url(cvic.img/.car-container);
+  }
+  
+  .car-container6{
+    background-image: url(fiesta.img/.car-container);
+  }
+  
+  .car-container7{
+    background-image: url(sentra.img/.car-container);
+  }
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ff6900;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #cd5500;
+}

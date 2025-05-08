@@ -1,0 +1,275 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #1f1f1f;
+}
+
+.header {
+    background: linear-gradient(to right, #fff5ee, #fff5ee);
+    padding: 20px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.header h1 {
+    font-size: 2rem;
+    color: #ff6900;
+    margin-bottom: 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ff6900;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #cd5500;
+}
+
+.squirtle {
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(to bottom, #fff5ee, #fbe1cd); /* degradê suave laranja claro */
+}
+
+.squirtle h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #ff6900;
+}
+
+.squirtle p {
+    color: #444;
+    margin-bottom: 20px;
+}
+
+.squirtle button {
+    background-color: #ff6900;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.squirtle button a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.squirtle button:hover {
+    opacity: 0.9;
+    color: #cd5500;
+}
+
+.benefícios {
+    padding: 50px 20px;
+    background-color: #fff5ee; /* fundo laranja claro */
+}
+
+.benefícios h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #ff6900;
+    text-align: center;
+}
+
+.benefícios h3 {
+    font-size: 1.5rem;
+    color: #ff6900;
+    text-align: center;
+}
+
+.benefícios p {
+    color: #444;
+    margin-bottom: 20px;
+    text-align: center;   
+}
+
+.lista-benefícios {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 600px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.lista-benefícios li:hover{ 
+    background-color: #f5dfc9; /* fundo laranja claro */
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    transform: scale(1.02); /* leve aumento ao passar o mouse */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* sombra ao passar o mouse */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* transição suave */
+}
+
+.lista-benefícios li {
+    background-color: #f5dfc9; 
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.lista-benefícios li h3 {
+    font-size: 1.5rem;
+    color: #ff6900;
+    text-align: center;
+}
+
+.benefícios li p {
+    color: #444;
+    margin: 0;
+    text-align: justify;
+}
+
+.benefícios li h3 {
+    margin-bottom: 5px;
+}
+
+.benefícios li p {
+    font-size: 1rem;
+}
+
+.benefícios li h3 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.promoções {
+    background-color: #fff5ee;
+    padding: 20px;
+    border-radius: 10px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .promoções h3 {
+    color: #ff6900;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .promoções p {
+    color: #444;
+    margin-bottom: 20px;
+    text-align: center;  
+}
+  
+  .ofertas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+    justify-content: space-between;
+  
+  }
+  
+  .ofertas > div {
+    background-color: #f5dfc9;
+    border-radius: 10px;
+    padding: 15px;
+    flex: 0 1 48%; /* Duas colunas */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Efeito hover apenas na box em foco */
+  .ofertas > div:hover {
+    background-color: #f5dfc9;
+    cursor: pointer;
+    transform: scale(1.02);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Listas com estilo e efeito */
+  .ofertas li {
+    list-style-type: disc;
+    margin-left: 20px;
+    padding: 5px;
+    border-radius: 5px;
+    text-align: justify;
+  }
+
+  .ofertas p {
+    text-align: justify;
+  }
+
+  .ésobre {
+    background-color: #fff5ee;
+    padding: 30px;
+    border-radius: 10px;
+    font-family: Arial, sans-serif;
+    color: #444;
+    line-height: 1.6;
+  }
+  
+  .ésobre h2 {
+    color: #ff6900;
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  
+  /* Box de parágrafo */
+  .sobre-box {
+    background-color: #f5dfc9;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    text-align: justify;
+  }
+  
+  /* Estilo da imagem e info lado a lado */
+  .gerente-box {
+    display: flex;
+    justify-content: center; /* Centraliza todo o conteúdo */
+    align-items: center;
+    gap: 20px;
+    margin: 30px 0;
+    flex-wrap: wrap; /* permite responsividade */
+  }
+  
+  .gerente {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .gerente:hover {
+    transform: scale(1.10); /* leve aumento ao passar o mouse */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* sombra ao passar o mouse */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* transição suave */
+  }
+  
+  .gerente-info h4 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #ff6900;
+  }
+  
+  .gerente-info p {
+    margin: 5px 0 0;
+    color: #666;
+  }
