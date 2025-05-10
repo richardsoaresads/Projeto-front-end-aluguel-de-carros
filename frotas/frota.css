@@ -72,7 +72,10 @@ nav ul li a:hover {
 .car-container4,
 .car-container5,
 .car-container6,
-.car-container7 {
+.car-container7,
+.car-container8,
+.car-container9,
+.car-container10{
   display: inline-block;
   width: 30%;
   margin: 1.5%;
