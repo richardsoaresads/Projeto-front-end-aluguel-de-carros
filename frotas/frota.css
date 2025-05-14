@@ -76,6 +76,7 @@ nav ul li a:hover {
 .car-container8,
 .car-container9,
 .car-container10{
+   text-decoration: none;
   display: inline-block;
   width: 30%;
   margin: 1.5%;
@@ -130,7 +131,7 @@ nav ul li a:hover {
   margin-bottom: 10px;
 }
 
-button {
+.btn {
   background-color: #ff6900;
   color: white;
   border: none;
