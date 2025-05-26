@@ -28,7 +28,7 @@
             <input type="text" id="telefone" name="telefone" maxlength="15" placeholder="Celular" oninput="this.value = this.value.replace(/\D/g, '').replace(/^(\d{2})(\d)/, '($1) $2').replace(/(\d{5})(\d)/, '$1-$2');">
             <input type="text" name="telefone" placeholder="Telefone fixo (opcional)">
             <input type="email" name="email" placeholder="Email" required>
-            <input type="text" id="cpf" name="cpf" maxlength="14" placeholder="CPF 000.000.000-00" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\d{3})(\d)/, '$1.$2').replace(/(\d{3})(\d)/, '$1.$2').replace(/(\d{3})(\d{1,2})/, '$1-$2');" required>
+            <input type="text" id="cpf" name="cpf" maxlength="14" placeholder="CPF" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\d{3})(\d)/, '$1.$2').replace(/(\d{3})(\d)/, '$1.$2').replace(/(\d{3})(\d{1,2})/, '$1-$2');" required>
 
             <input type="text" name="endereço" placeholder="Logradouro" required>
             <input type="text" name="estado" placeholder="Estado" required>
@@ -44,6 +44,5 @@
             <button type="submit">Cadastrar</button>
         </form>
     </div>
-
 </body>
 </html>
