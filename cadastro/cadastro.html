@@ -1,15 +1,15 @@
 <!DOCTYPE html> 
-<html lang = "pt-br">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="vieport" content="width=device-width, initial scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tela de Cadastro</title>
     <link rel="stylesheet" href="cadastro.css">
 </head>
 <body>
     <div class="nascimento">
         <h2>Cadastro</h2>
-        <form action="inserir" method="POST">
+        <form id="registrationForm" onsubmit="return validarSenha()">
             <input type="text" name="nome" placeholder="Nome" required>
             <input type="text" name="materno" placeholder="Nome Materno" required>
             <input type="text" name="sobrenome" placeholder="Sobrenome">
@@ -26,23 +26,42 @@
             </select>
 
             <input type="text" id="telefone" name="telefone" maxlength="15" placeholder="Celular" oninput="this.value = this.value.replace(/\D/g, '').replace(/^(\d{2})(\d)/, '($1) $2').replace(/(\d{5})(\d)/, '$1-$2');">
-            <input type="text" name="telefone" placeholder="Telefone fixo (opcional)">
-            <input type="email" name="email" placeholder="Email" required>
+            <input type="text" name="telefone_fixo" placeholder="Telefone fixo (opcional)">
+            <input type="email" id="email" name="email" placeholder="Email" required>
             <input type="text" id="cpf" name="cpf" maxlength="14" placeholder="CPF" oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\d{3})(\d)/, '$1.$2').replace(/(\d{3})(\d)/, '$1.$2').replace(/(\d{3})(\d{1,2})/, '$1-$2');" required>
 
-            <input type="text" name="endereço" placeholder="Logradouro" required>
+            <input type="text" name="endereco" placeholder="Logradouro" required>
             <input type="text" name="estado" placeholder="Estado" required>
             <input type="text" name="bairro" placeholder="Bairro" required>
-            <input type="text" name="número" placeholder="Número" maxlength="4" required oninput="this.value = this.value.replace(/[^0-9]/g, '')" required> 
+            <input type="text" name="numero" placeholder="Número" maxlength="4" required oninput="this.value = this.value.replace(/[^0-9]/g, '')" required> 
             <input type="text" name="complemento" placeholder="Complemento" required>
-        </form>
 
-        <form onsubmit="return validarSenha()">
             <input type="password" id="senha" name="senha" placeholder="Senha" required>
             <input type="password" id="confirmacao" name="confirmacao" placeholder="Confirmar senha" required>
 
             <button type="submit">Cadastrar</button>
         </form>
     </div>
+
+    <script>
+        function validarSenha() {
+            const senha = document.getElementById('senha').value;
+            const confirmacao = document.getElementById('confirmacao').value;
+
+            if (senha !== confirmacao) {
+                alert("As senhas não coincidem!");
+                return false;
+            }
+
+            
+            const email = document.getElementById('email').value;
+            localStorage.setItem('registeredEmail', email);
+            localStorage.setItem('registeredPassword', senha);
+
+            alert("Cadastro realizado com sucesso!");
+            window.location.href = 'http://127.0.0.1:5500/pagina-inicial/Login/login.html'; 
+            return false; 
+        }
+    </script>
 </body>
 </html>
