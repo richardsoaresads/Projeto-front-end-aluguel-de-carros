@@ -38,11 +38,38 @@ section {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 }
 
+.tema {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Espaça o título e o botão */
+    width: 100%; /* Para ocupar toda a largura */
+}
+
 section h2 {
     color: #ff6900;
     font-size: 2rem;
     margin-bottom: 20px;
     text-align: center;
+}
+
+.theme-toggle-button {
+    width: 40px;
+    height: 40px;
+    background-color: #ff6900;
+    border: none;
+    border-radius: 50%; /* Faz o botão ser redondo */
+    cursor: pointer;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+    color: #333333;
+    margin-left: 10px; /* Espaço entre o título e o botão */
+}
+
+.theme-toggle-button:hover {
+    background-color: #e76a11; /* Cor ao passar o mouse */
 }
 
 section form {
@@ -89,37 +116,43 @@ form button:hover {
     background-color: #cd5500;
 }
 
-/*pagina do obrigado*/
-.main {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    background: linear-gradient(to bottom right, #ffe8d6, #fdd0b0);
-    flex-direction: column;
+/* Modo escuro */
+body.dark-theme {
+    background: linear-gradient(135deg, #0f0e17, #0f0d19);
+    color: #e6e6e6;
 }
-.text {
-    font-size: 45px;
+
+body.dark-theme section {
+    background: linear-gradient(to bottom right, #333, #444);
+    color: #e6e6e6;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+body.dark-theme section h2 {
     color: #ff6900;
-    margin-bottom: 30px;
 }
-.paragrafo {
-    color: #0c0500;
-    margin-bottom: 50px;
-    font-size:larger;
+
+body.dark-theme form label {
+    color: #e6e6e6;
 }
-.btn {
-    padding: 12px;
-    cursor: pointer;
-    font-size: 1rem;
+
+body.dark-theme form input,
+body.dark-theme form textarea {
+    background-color: #555;
+    color: #e6e6e6;
+    border: 1px solid #ff6a0059;
+}
+
+body.dark-theme form input:focus,
+body.dark-theme form textarea:focus {
+    border-color: #ff6900;
+}
+
+body.dark-theme form button {
     background-color: #ff6900;
-    border: none;
     color: #ffffff;
-    border-radius: 8px;
-    transition: background-color 0.3s ease;
 }
-.btn:hover {
-    border-radius: 16px;
+
+body.dark-theme form button:hover {
     background-color: #cd5500;
-    transition: background-color 0.3 ease;
 }

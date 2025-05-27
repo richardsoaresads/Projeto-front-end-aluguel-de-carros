@@ -8,7 +8,11 @@
 </head>
 <body>
     <div class="nascimento">
+        <div class="tema">
         <h2>Cadastro</h2>
+        <button type="button" class="theme-toggle-button" aria-label="Alternar tema">🌙</button>
+        </div>
+
         <form action="inserir" method="POST">
             <input type="text" name="nome" placeholder="Nome" required>
             <input type="text" name="materno" placeholder="Nome Materno" required>
@@ -44,5 +48,6 @@
             <button type="submit">Cadastrar</button>
         </form>
     </div>
+     <script src="toggleTheme.js" defer></script>
 </body>
 </html>

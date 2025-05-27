@@ -24,7 +24,7 @@ body {
 }
 
 .logo img {
-    max-width: 20%;
+    max-width: 30%;
     height: auto;
     display: block;
     margin: 0 auto;
@@ -411,20 +411,23 @@ nav ul li a:hover {
     }
 }
 
-/* Código adicional para tema escuro conforme acordo */
+/* Código para tema escuro */
 
 body.dark-theme {
-    background-color: #1a1a1a !important;
+    background: linear-gradient(135deg, #0f0e17, #0f0d19); !important;
     color: #e6e6e6 !important;
 }
 
 body.dark-theme .header {
-    background: linear-gradient(to right, #2c2c2c, #1f1f1f) !important;
-    color: #f0a040 !important;
+  /* Degradê de cima para baixo */
+  background: linear-gradient(to bottom, #2c2c2c, #1a1a2e);
+  color: #f0a040;
 }
 
 body.dark-theme nav ul li a {
-    color: #f0a040 !important;
+    color: #ff6900 !important;
+    font-weight: bold !important;
+    transition: color 0.3s ease !important;
 }
 
 body.dark-theme nav ul li a:hover {
@@ -444,18 +447,18 @@ body.dark-theme .banner-texto h3 {
 body.dark-theme .button {
     background-color: #fff !important;
     color: #b24b00 !important;
-    border-color: #b24b00 !important;
+    border-color: #000000 !important;
 }
 
 body.dark-theme .benefícios {
-    background-color: #2b2b2b !important;
+    background: linear-gradient(135deg, #0f0e17, #0f0d19); /* Cor de fundo dos benefícios */
     color: #ddd !important;
 }
 
 body.dark-theme .benefício {
-    background-color: #3a3a3a !important;
+    background-color: #3a3a3a !important; /* Cor de fundo dos benefícios lá das 4 boxes */
     color: #eee !important;
- 
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3) !important;
 }
 
 body.dark-theme .benefício h3 {
@@ -473,12 +476,12 @@ body.dark-theme .fala-gerente {
 }
 
 body.dark-theme .ésobre {
-    background-color: #2d2d2d !important;
+    background: linear-gradient(135deg, #0f0e17, #0f0d19); /* Cor de fundo do sobre nós */
     color: #ddd !important;
 }
 
 body.dark-theme .sobre-box {
-    background-color: #3a3a3a !important;
+    background-color: #3a3a3a !important; /* Cor de fundo dos boxes lá do sobre nós */
     box-shadow: 0 2px 6px rgba(255, 165, 0, 0.3) !important;
 }
 

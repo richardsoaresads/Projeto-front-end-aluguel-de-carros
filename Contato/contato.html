@@ -8,22 +8,25 @@
 </head>
 <body>
     <section>
-        <h2>Entre em Contato</h2>
+        <div class="tema">
+            <h2>Entre em Contato</h2>
+            <button type="button" class="theme-toggle-button" aria-label="Alternar tema">🌙</button>
+        </div>
         <img src="/pagina-inicial/imagens/gb.png" alt="nosso atendente" class="atendente">
-        <h4>Geberellinton Aquino Mosquito</h4>
+        <h4>Wanderson Barata</h4>
         <h4>Avaliação: 4.9⭐</h4>
         <form action="https://api.staticforms.xyz/submit" method="post">
-        <label>Nome</label>
-        <input type="text" name="name" placeholder="Digite seu nome" autocomplete="off"required>
-        <label>Email</label>
-        <input type="email" name="email" placeholder="Digite seu email" autocomplete="off" required>
-        <label>Mensagem</label>
-        <textarea name="message" cols="30" rows="10" placeholder="Digite sua mensagem" required></textarea>
-        <button type="submit"  href="aggradecimento.html">Enviar</button>
-       
-        <input type="hidden" name="apiKey" value="sf_hkh5mnhcl7f8eeg2hnm68ma6">
-        <input type="hidden" name="redirectTo" value="http://127.0.0.1:5500/Contato/aggradecimento.html">
+            <label>Nome</label>
+            <input type="text" name="name" placeholder="Digite seu nome" autocomplete="off" required>
+            <label>Email</label>
+            <input type="email" name="email" placeholder="Digite seu email" autocomplete="off" required>
+            <label>Mensagem</label>
+            <textarea name="message" cols="30" rows="10" placeholder="Digite sua mensagem" required></textarea>
+            <button type="submit" href="aggradecimento.html">Enviar</button>
+            <input type="hidden" name="apiKey" value="sf_hkh5mnhcl7f8eeg2hnm68ma6">
+            <input type="hidden" name="redirectTo" value="http://127.0.0.1:5500/Contato/aggradecimento.html">
         </form>
     </section>
+    <script src="toggleTheme.js" defer></script>
 </body>
 </html>

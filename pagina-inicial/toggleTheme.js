@@ -1,11 +1,9 @@
-// Script para alternar tema claro/escuro, adicionando botão na barra de navegação
-
 document.addEventListener('DOMContentLoaded', () => {
     // Seleciona o menu principal onde o botão será adicionado
     const navList = document.querySelector('.header nav ul');
-    if (!navList) return; // Proteção caso elemento não exista
+    if (!navList) return;
 
-    // Cria o botão circular para alternar tema
+
     const toggleButton = document.createElement('button');
     toggleButton.type = 'button';
     toggleButton.className = 'theme-toggle-button';

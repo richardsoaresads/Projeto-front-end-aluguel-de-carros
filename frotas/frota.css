@@ -12,7 +12,7 @@ body {
 
 /* Cabeçalho ajustado */
 .header {
-  background: linear-gradient(to right, #fff5ee, #fff5ee);
+  background: linear-gradient(to bottom, #fff5ee, #fff5ee);
   padding: 20px 10px;
   text-align: center;
   color: #ffffff;
@@ -24,11 +24,12 @@ body {
 
 /* Logo ajustada */
 .logo img {
-  max-width: 200px; /* Tamanho reduzido da logo */
-  height: auto;
-  display: block;
-  margin: 0 auto;
+    max-width: 30%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
 }
+
 
 nav ul {
   list-style: none;
@@ -46,6 +47,32 @@ nav ul li a {
 
 nav ul li a:hover {
   color: #cd5500;
+}
+
+.theme-toggle-button {
+  width: 40px;
+  height: 40px;
+  background-color: #ff6900; /* laranja */
+  border: none;
+  border-radius: 50%; /* circulo */
+  cursor: pointer;
+  font-size: 20px;
+  color: #333333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s;
+  margin-left: 10px; /* pequeno espaçamento */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* sombra sutil */
+  padding: 5px; /* espaçamento interno */
+  border: 2px solid #ff6900; /* borda laranja */
+  box-sizing: border-box; /* garante que o padding e a borda não aumentem o tamanho total */
+  font-weight: bold; /* texto em negrito */
+  transition: background-color 0.3s, transform 0.2s; /* transição suave */
+}
+
+.theme-toggle-button:hover {
+  background-color: #e76a11; /* laranja mais escuro no hover */
 }
 
 .squirtle {
@@ -75,8 +102,8 @@ nav ul li a:hover {
 .car-container7,
 .car-container8,
 .car-container9,
-.car-container10{
-   text-decoration: none;
+.car-container10 {
+  text-decoration: none;
   display: inline-block;
   width: 30%;
   margin: 1.5%;
@@ -107,7 +134,7 @@ nav ul li a:hover {
 /* Imagens uniformes */
 .car-card img {
   width: 100%;
-  height: 180=px; /* Altura fixa */
+  height: 180px; /* Altura fixa */
   object-fit: cover;
   border-radius: 10px;
 }
@@ -144,4 +171,51 @@ nav ul li a:hover {
 
 button:hover {
   background-color: #e65c00;
+}
+
+/* Código para tema escuro */
+body.dark-theme {
+  background: linear-gradient(135deg, #211f2f, #0f0d19);
+  color: #e6e6e6;
+}
+
+body.dark-theme .header {
+  /* Degradê de cima para baixo */
+  background: linear-gradient(to bottom, #2c2c2c, #1a1a2e);
+  color: #ff6900;
+}
+
+body.dark-theme nav ul li a {
+  color: #ff6900;
+}
+
+body.dark-theme nav ul li a:hover {
+  color: #c37500;
+}
+
+body.dark-theme .squirtle {
+  /* Degradê de cima para baixo, começando com uma cor próxima à cor final do header */
+  background: linear-gradient(to bottom, #1a1a2e, #1b1b2f);
+  color: #ffffff;
+}
+
+body.dark-theme .squirtle h2 {
+  color: #ff6900;
+}
+
+body.dark-theme .car-card {
+  background-color: #3a3a3a;
+  color: #e6e6e6;
+}
+
+body.dark-theme .car-info h2 {
+  color: #ff6900;
+}
+
+body.dark-theme .price {
+  color: #ccc;
+}
+
+body.dark-theme .status {
+  color: #4caf50; /* Verde para status disponível */
 }
