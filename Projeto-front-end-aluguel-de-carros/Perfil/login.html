@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aluguel Login</title>
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="login.css" />
+</head>
+<body>
+    <div>
+        <main class="container">
+            <form id="loginForm">
+                <div class="titulo-e-tema">
+                    <h1>Login</h1>
+                    <button type="button" class="theme-toggle-button" aria-label="Alternar tema" id="toggleButton">🌙</button>
+                </div>
+                <div class="input-box">
+                    <input id="username" placeholder="Usuário" type="email" required />
+                    <i class="bx bxs-user"></i>
+                </div>
+                <div class="input-box">
+                    <input id="password" placeholder="Senha" type="password" required />
+                    <i class="bx bxs-lock-alt"></i>
+                </div>
+                <div class="lembrar">
+                    <label>
+                        <input type="checkbox" id="rememberMe" />
+                        Lembrar Senha
+                    </label>
+                </div>
+                <div class="esqueci">
+                    <a href="#">Esqueci a senha</a>
+                </div>
+
+                <button type="submit" class="login">Login</button>
+
+                <div class="register-link">
+                    <p>Não tem uma conta? <a href="/Perfil/cadastro.html">Cadastre-se</a></p>
+                </div>
+            </form>
+        </main>
+    </div>
+
+    <script>
+        const toggleButton = document.getElementById('toggleButton');
+
+        // Alternar tema claro/escuro
+        toggleButton.addEventListener('click', () => {
+            document.body.classList.toggle('dark-theme');
+            const isDark = document.body.classList.contains('dark-theme');
+            toggleButton.textContent = isDark ? '☀️' : '🌙';
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        });
+
+        // Verifica o tema salvo
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            document.body.classList.add('dark-theme');
+            toggleButton.textContent = '☀️';
+        }
+
+        // Login
+        const loginForm = document.getElementById('loginForm');
+        const usernameInput = document.getElementById('username');
+        const passwordInput = document.getElementById('password');
+        const rememberMeCheckbox = document.getElementById('rememberMe');
+
+        loginForm.addEventListener('submit', (event) => {
+            event.preventDefault();
+
+            const email = usernameInput.value.trim().toLowerCase();
+            const senha = passwordInput.value;
+
+            const usuarios = JSON.parse(localStorage.getItem('usuarios')) || {};
+
+            if (!usuarios[email]) {
+                alert("Usuário não encontrado. Verifique o e-mail ou cadastre-se.");
+                return;
+            }
+
+            if (usuarios[email].senha !== senha) {
+                alert("Senha incorreta.");
+                return;
+            }
+
+            // Salvar usuário logado
+            localStorage.setItem('usuario', JSON.stringify(usuarios[email]));
+
+            if (rememberMeCheckbox.checked) {
+                localStorage.setItem('savedUser', email);
+                localStorage.setItem('savedPassword', senha);
+                localStorage.setItem('rememberMe', 'true');
+            } else {
+                localStorage.removeItem('savedUser');
+                localStorage.removeItem('savedPassword');
+                localStorage.setItem('rememberMe', 'false');
+            }
+
+            // Redirecionar
+            location.href = '/Perfil/perfil.html'; // Troque o caminho se necessário
+        });
+    </script>
+</body>
+</html>

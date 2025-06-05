@@ -1,0 +1,463 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f4f4f4;
+  
+  font-family: 'Segoe UI', sans-serif;
+  color: #f1f1f1;
+  line-height: 1.6;
+}
+
+a {
+  color: #ff6600;
+  text-decoration: none;
+}
+
+/* Logo ajustada */
+.logo img {
+  max-width: 200px; /* Tamanho reduzido da logo */
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #ff6900;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #cd5500;
+}
+
+.theme-toggle-button {
+  width: 40px;
+  height: 40px;
+  background-color: #ff6900; /* laranja */
+  border: none;
+  border-radius: 50%; /* circulo */
+  cursor: pointer;
+  font-size: 20px;
+  color: #333333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s;
+  margin-left: 10px; /* pequeno espaçamento */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* sombra sutil */
+  padding: 5px; /* espaçamento interno */
+  border: 2px solid #ff6900; /* borda laranja */
+  box-sizing: border-box; /* garante que o padding e a borda não aumentem o tamanho total */
+  font-weight: bold; /* texto em negrito */
+  transition: background-color 0.3s, transform 0.2s; /* transição suave */
+}
+
+.theme-toggle-button:hover {
+  background-color: #e76a11; /* laranja mais escuro no hover */
+}
+
+.header {
+  background: linear-gradient(to right, #fff5ee, #fff5ee);
+  padding: 20px 10px;
+  text-align: center;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.profile-button {
+    position: absolute; /* Agora é absoluto em relação ao header */
+    top: 20px; /* Distância do topo do header */
+    right: 20px; /* Distância da direita do header */
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #ff6900; /* Cor de fundo do botão */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000; /* Para garantir que fique acima de outros elementos */
+}
+.profile-button img {
+    width: 90%; /* Ajusta a imagem para caber no botão */
+    height: auto;
+    border-radius: 50%; /* Garante que a imagem seja circular */
+}
+
+/* Menu Dropdown */
+.dropdown-menu {
+  position: absolute;
+  top: 80px; /* 20px (top do botão) + 50px (altura do botão) + 10px (espaço) */
+  right: 20px;
+  background: var(--dropdown-bg, #ffffff);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  border: 1px solid var(--dropdown-border, #e5e7eb);
+  min-width: 140px;
+  display: none;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 1001;
+}
+
+.dropdown-menu.show {
+  display: flex;
+}
+
+.dropdown-menu button {
+  border: none;
+  background: transparent;
+  padding: 12px 20px;
+  text-align: left;
+  width: 100%;
+  font-size: 1rem;
+  color: var(--text-color, #1f2937);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.dropdown-menu button:hover,
+.dropdown-menu button:focus {
+  background-color: var(--background, #f9fafb);
+  outline: none;
+}
+
+
+.breadcrumb {
+  font-size: 14px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.car-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel {
+  position: relative;
+  max-width: 500px;
+  width: 100%;
+}
+
+.carousel img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+
+.thumbnails {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.thumbnails img {
+  width: 70px;
+  height: 45px;
+  object-fit: cover;
+  border-radius: 6px;
+  opacity: 0.6;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.thumbnails img:hover {
+  opacity: 1;
+  border: 2px solid #ff6600;
+}
+
+.info {
+  color: blue;
+  max-width: 400px;
+}
+
+.info h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.info h1 span {
+  font-weight: normal;
+  color: black;
+  font-size: 18px;
+}
+
+.model {
+  color: black;
+  margin-bottom: 20px;
+}
+
+.price {
+  font-size: 26px;
+  color: black  ;
+}
+
+.price span {
+  font-size: 16px;
+  color: black;
+}
+
+.details {
+  margin: 15px 0 25px;
+  color: black;
+}
+
+.btn {
+  background-color: #ff6600;
+  color: #fff;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+   background-color: #e05500;
+  transform: scale(1.05);
+}
+
+.advantages {
+  margin-top: 60px;
+  background: linear-gradient(to bottom, #fff5ee, #fbe1cd);
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.advantages h2 {
+  color: black;
+  margin-bottom: 20px;
+  font-size: 22px;
+}
+
+.advantages ul {
+  color: black;
+  list-style: none;
+  padding-left: 0;
+}
+
+.advantages li {
+  color: black;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+
+.specs {
+  margin: 40px auto 0;
+  background: linear-gradient(to bottom, #fff5ee, #fbe1cd);
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 1500px;
+   }
+
+
+.specs h2 {
+  color: #000;
+  margin-bottom: 20px;
+  font-size: 22px;
+}
+
+.specs ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.specs li {
+  color: #333;
+  margin-bottom: 10px;
+  font-size: 16px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.specs li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #ff6600;
+  font-weight: bold;
+}
+
+/* CSS tema escuro */
+.body.dark-theme {
+  background: linear-gradient(135deg, #211f2f, #0f0d19);
+  color: #2c2c2c;
+}
+
+body.dark-theme {
+  background: linear-gradient(135deg, #211f2f, #0f0d19);
+  color: #e6e6e6;
+  box-sizing: border-box;
+  transition: background 0.3s ease, color 0.3s ease;
+  background-color: #1a1a2e; /* Fundo mais escuro para o tema escuro */
+  color: #e6e6e6; /* Texto claro no tema escuro */
+}
+
+
+body.dark-theme .header {
+  background: linear-gradient(to bottom, #2c2c2c, #1a1a2e);
+  color: #ff6900;
+}
+
+body.dark-theme nav ul li a {
+  color: #ff6900;
+}
+
+body.dark-theme nav ul li a:hover {
+  color: #c37500;
+}
+
+body.dark-theme .logo img {
+  filter: brightness(0) invert(1); /* Inverte as cores da logo para se destacar no tema escuro */
+}
+
+body.dark-theme .profile-button {
+  background-color: #ff6900; /* Cor de fundo do botão no tema escuro */
+}
+
+body.dark-theme .breadcrumb {
+  color: #ff6900;
+}
+
+body.dark-theme .container {
+  background-color: #1a1a2e; /* Fundo mais escuro para o container */
+  color: #e6e6e6; /* Texto claro no container */
+}
+
+body.dark-theme .car-section {
+  background: linear-gradient(to bottom right, #333, #444);  /* Fundo mais escuro para a seção de carros */
+  color: #e6e6e6; /* Texto claro na seção de carros */
+  border-radius: 10px; /* Adiciona borda arredondada */
+  padding: 20px; /* Adiciona espaçamento interno */
+  border-color:#e05500; /* Borda com cor laranja */
+  border-style: solid; /* Define o estilo da borda */
+  border-width: 1px; /* Define a largura da borda */
+}
+
+body.dark-theme .carousel img {
+  filter: brightness(0.8); /* Escurece as imagens no tema escuro */
+}
+
+body.dark-theme .thumbnails img {
+  opacity: 0.8; /* Reduz a opacidade das miniaturas no tema escuro */
+}
+
+body.dark-theme .thumbnails img:hover {
+  opacity: 1; /* Mantém a opacidade total ao passar o mouse */
+  border: 2px solid #ff6600; /* Borda laranja ao passar o mouse */
+}
+
+body.dark-theme .info {
+  color: #e6e6e6; /* Texto claro na seção de informações do carro */
+}
+
+body.dark-theme .info h1 {
+  color: #ff6900; /* Título em laranja no tema escuro */
+}
+
+body.dark-theme .model {
+  color: #e6e6e6; /* Texto claro para o modelo do carro */
+}
+
+body.dark-theme .price {
+  color: #ff6600; /* Preço em laranja no tema escuro */
+}
+
+body.dark-theme .details {
+  color: #e6e6e6; /* Texto claro para os detalhes do carro */
+}
+
+body.dark-theme .btn {
+  background-color: #ff6600; /* Botão laranja no tema escuro */
+  color: #fff; /* Texto branco no botão */
+}
+
+body.dark-theme .btn:hover {
+  background-color: #e05500; /* Cor do botão ao passar o mouse no tema escuro */
+}
+
+/* Informações do carro */
+body.dark-theme .car-info h2 {
+  color: #ff6900; /* Título em laranja no tema escuro */
+}
+
+body.dark-theme .status {
+  font-weight: bold;
+  color: green; /* Mantém o status em verde */
+  margin-bottom: 10px;
+}
+
+body.dark-theme .h1 {
+  color: #ff6900; /* Título em laranja no tema escuro */
+}
+
+
+body.dark-theme .advantages {
+  margin-top: 60px;
+  background: linear-gradient(to bottom, #2c2c2c, #1a1a2e); /* Fundo mais escuro para a seção de vantagens */
+  padding: 30px;
+  border-radius: 10px;
+  color: #e6e6e6; /* Texto claro na seção de vantagens */
+  border-color: #e05500; /* Borda com cor laranja */
+  border-style: solid; /* Define o estilo da borda */
+  border-width: 1px; /* Define a largura da borda */
+}
+
+body.dark-theme .advantages h2 {
+  color: #ff6900; /* Título em laranja na seção de vantagens */
+}
+
+body.dark-theme .advantages ul {
+  color: #e6e6e6; /* Texto claro na lista de vantagens */
+}
+
+body.dark-theme .advantages li {
+  color: #e6e6e6; /* Texto claro para os itens da lista de vantagens */
+}
+
+body.dark-theme .specs {
+  background: linear-gradient(to bottom, #2c2c2c, #1a1a2e); /* Fundo mais escuro para a seção de especificações */
+  color: #e6e6e6; /* Texto claro na seção de especificações */
+}
+
+body.dark-theme .specs h2 {
+  color: #ff6900; /* Título em laranja na seção de especificações */
+}
+
+body.dark-theme .specs ul {
+  color: #e6e6e6; /* Texto claro na lista de especificações */
+}
+
+body.dark-theme .specs li {
+  color: #e6e6e6; /* Texto claro para os itens da lista de especificações */
+  padding-left: 20px;
+  position: relative;
+}
