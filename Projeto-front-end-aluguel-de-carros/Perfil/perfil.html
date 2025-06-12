@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Perfil do Usuário</title>
+  <link rel="stylesheet" href="perfil.css" />
+</head>
+
+<body>
+ <main class="profile-container" role="main" aria-label="Página de perfil do usuário">
+  <button type="button" class="theme-toggle-button" aria-label="Alternar tema">🌙</button>
+  <label for="uploadFoto" class="profile-photo" aria-label="Mudar foto de perfil" tabindex="0" role="button" title="Clique para alterar a foto de perfil">
+    <img id="fotoPerfil" src="/Imagens/perfil-foto.png" alt="Foto de perfil do usuário" />
+  </label>
+  <input type="file" id="uploadFoto" accept="image/*" style="display:none" />
+  <h1 id="nomeUsuario">Nome Sobrenome</h1> 
+
+  <p id="emailUsuario">Email do Usuário</p>
+
+  <ul class="info-list" aria-label="Informações do usuário">
+    <li><span class="label">Data de nascimento:</span> <span id="dobUsuario" class="value">#</span></li>
+    <li><span class="label">Sexo:</span> <span id="sexoUsuario" class="value">#</span></li>
+    <li><span class="label">Endereço:</span> <span id="enderecoUsuario" class="value">#</span></li>
+    <li><span class="label">Bairro:</span> <span id="bairroUsuario" class="value">#</span></li>
+    <li><span class="label">Número:</span> <span id="numeroUsuario" class="value">#</span></li>
+    <li><span class="label">Complemento:</span> <span id="complementoUsuario" class="value">#</span></li>
+  </ul>
+
+  <div class="profile-actions">
+    <button type="button" id="paginaInicial" aria-label="Página inicial">Página Inicial</button>
+    <button type="button" id="sair" aria-label="Sair da conta">Sair</button>
+  </div>
+
+  <footer>© 2025 Carioca Drive</footer>
+</main>
+
+<script src="perfil.js"></script>
+<script src="/LocalStorage/storage.js" defer></script>
+</body>
+</html>
