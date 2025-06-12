@@ -1,0 +1,585 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f4f4f4;
+  color: #1f1f1f;
+}
+
+.header {
+  background: linear-gradient(to right, rgb(255, 246, 237), #fbe1cd);
+  padding: 2rem;
+  text-align: center;
+  position: relative; /* permite posicionamento absoluto interno */
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  color: #ff6900;
+  margin-bottom: 1rem;
+}
+
+.profile-area {
+  position: absolute; 
+  top: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  z-index: 1000;
+}
+
+.profile-button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #ff6900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.profile-button img {
+  width: 90%;
+  height: auto;
+  border-radius: 50%;
+}
+
+/* Menu Dropdown */
+.dropdown-menu {
+  position: absolute;
+  top: calc(100% + 8px); /* abaixo do botão */
+  right: 0;
+  background: var(--dropdown-bg, #ffffff);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  border: 1px solid var(--dropdown-border, #e5e7eb);
+  min-width: 140px;
+  display: none;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 1001;
+}
+
+.dropdown-menu.show {
+  display: flex;
+}
+
+.dropdown-menu button {
+  border: none;
+  background: transparent;
+  padding: 12px 20px;
+  text-align: left;
+  width: 100%;
+  font-size: 1rem;
+  color: var(--text-color, #1f2937);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.dropdown-menu button:hover,
+.dropdown-menu button:focus {
+  background-color: var(--background, #f9fafb);
+  outline: none;
+}
+
+button:focus {
+  outline: 2px solid var(--primary-color, #4f46e5);
+  outline-offset: 2px;
+}
+
+.logo img {
+    max-width: 30%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ff6900;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #cd5500;
+}
+
+.banner {
+    background-color: #d64500;
+    border-radius: 2rem;
+    padding: 5% 8%; 
+    position: relative;
+    min-height: 30vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+  
+}
+
+
+.banner-texto h3 {
+    z-index: 3;
+    color: white;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+    line-height: 1.3;
+    text-align: center;
+    max-width: 400px;
+}
+
+.banner-texto h3 span {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.button {
+    position: absolute;
+    top: 55%;
+    right: 10%;
+    padding: 1rem 2rem;
+    background-color: rgb(204, 195, 195);
+    color: rgb(0, 0, 0);
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.banner-car1,
+.banner-car2,
+.banner-car3 {
+    position: absolute;
+    z-index: 1;
+}
+
+.banner-car1 {
+    bottom: -2%;
+    left: 5%;
+}
+
+.banner-car1 img{
+    width: 35%;
+    height: auto;
+}
+
+.banner-car2 img,
+.banner-car3 img {
+    width: 75%;
+    height: auto;
+}
+
+.banner-car2 {
+    bottom: 33%; 
+    right: 10%;
+}
+
+.banner-car3 {
+    right: 4%;
+    bottom: 30%;
+}
+
+.squirtle {
+    text-align: center;
+    padding: 1% 2%;
+}
+
+.squirtle h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #ff6900;
+}
+
+.squirtle p {
+    color: #444;
+    margin-bottom: 2rem;
+}
+
+.squirtle button {
+    background-color: #ff6900;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.squirtle button a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.squirtle button:hover {
+    opacity: 0.9;
+    color: #cd5500;
+}
+
+.benefícios {
+    padding: 5% 2%;
+    background-color: #fff5ee;
+}
+
+.benefícios h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #ff6900;
+    text-align: center;
+}
+
+.lista-benefícios {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.benefício {
+    flex: 1 1 200px; /* Flexível com base na largura */
+    background-color: #f5dfc9;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    text-align: center;
+    overflow: hidden;
+}
+
+.benefício:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.benefício img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    background-color: #fff;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.benefício h3 {
+    font-size: 1.2rem;
+    color: #ff6900;
+    margin-bottom: 0.5rem;
+}
+
+.benefício p {
+    font-size: 1rem;
+    color: #444;
+    text-align: justify;
+    overflow: hidden;
+}
+
+.banner {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 30vh; /* Altura relativa */
+    background-color: #ff6600;
+    color: white;
+}
+
+.section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.promo {
+    color: white;
+    text-align: center;
+}
+
+.promo .small-text {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.promo h1 {
+    color: white;
+    font-size: 4rem;
+    margin: 0;
+}
+
+.promo h1 span {
+    display: block;
+    font-size: 2rem;
+}
+
+.image-section img {
+    width: 150px; /* Definindo uma largura fixa */
+    height: 150px; /* Definindo a altura igual à largura para manter o formato circular */
+    object-fit: cover; /* Garante que a imagem preencha o círculo */
+    border-radius: 50%; /* Faz a imagem ficar em forma de círculo */
+    border: 2px solid rgba(255, 255, 255, 0.7); /* Borda mais discreta e levemente transparente */
+    display: block; /* Garante que a imagem seja tratada como um bloco */
+    right: -15%;
+}
+
+.offer {
+    background-color: #ff6600;
+    text-align: center;
+}
+
+.highlight {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.car-img {
+    width: 80%;
+    max-width: 250px;
+    margin: 1rem 0;
+}
+
+.button {
+    background-color: white;
+    color: #ff6600;
+    padding: 1rem 2rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+.fala-gerente {
+   background: linear-gradient(135deg, #ff7919, #caa900);
+    padding: 2rem;
+    border-radius: 20px;
+    max-width: 250px;
+    font-weight: bold;
+    font-style: monospace;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    position: relative;
+    margin: 2rem auto; /* Centraliza */
+}
+
+.fala-gerente::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -5px;
+    transform: translateY(-50%);
+    border: 10px solid transparent;
+    border-right-color: rgb(0, 0, 0);
+}
+
+.ésobre {
+    background-color: #fff5ee;
+    padding: 3rem;
+    border-radius: 10px;
+    font-family: Arial, sans-serif;
+    color: #444;
+    line-height: 1.6;
+}
+
+.ésobre h2 {
+    color: #ff6900;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.sobre-box {
+    background-color: #f5dfc9;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    text-align: justify;
+}
+
+.gerente-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+}
+
+.gerente {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.gerente:hover {
+    transform: scale(1.10);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gerente-info h4 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #ff6900;
+}
+
+.gerente-info p {
+    margin: 0.5rem 0 0;
+    color: #666;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 2rem;
+    }
+
+    .banner-texto h3 {
+        font-size: 2rem;
+        margin-left: 0;
+    }
+
+    .button {
+        padding: 0.5rem 1rem;
+    }
+
+    .benefício {
+        flex: 1 1 100%; /* Cada benefício ocupa 100% em telas pequenas */
+    }
+
+    .promo h1 {
+        font-size: 3rem;
+    }
+
+    .promo h1 span {
+        font-size: 1.5rem;
+    }
+}
+
+/* Código para tema escuro */
+
+body.dark-theme {
+    background: linear-gradient(135deg, #0f0e17, #0f0d19) !important; 
+    color: #e6e6e6 !important;
+}
+
+body.dark-theme .header {
+  /* Degradê de cima para baixo */
+  background: linear-gradient(to bottom, #2c2c2c, #1a1a2e);
+  color: #f0a040;
+}
+
+body.dark-theme nav ul li a {
+    color: #ff6900 !important;
+    font-weight: bold !important;
+    transition: color 0.3s ease !important;
+}
+
+body.dark-theme nav ul li a:hover {
+    color: #c37500 !important;
+}
+
+body.dark-theme .logo img {
+  filter: brightness(0) invert(1); /* Inverte as cores da logo para se destacar no tema escuro */
+}
+
+body.dark-theme .banner {
+    background-color: #b24b00 !important;
+    color: #fff !important;
+}
+
+body.dark-theme .banner-texto h3 {
+    color: #fff !important;
+    text-shadow: 1px 1px 3px #000;
+}
+
+body.dark-theme .button {
+    background-color: #fff !important;
+    color: #b24b00 !important;
+    border-color: #000000 !important;
+}
+
+body.dark-theme .benefícios {
+    background: linear-gradient(135deg, #0f0e17, #0f0d19); /* Cor de fundo dos benefícios */
+    color: #ddd !important;
+}
+
+body.dark-theme .benefício {
+    background-color: #3a3a3a !important; /* Cor de fundo dos benefícios lá das 4 boxes */
+    color: #eee !important;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3) !important;
+}
+
+body.dark-theme .benefício h3 {
+    color: #f0a040 !important;
+}
+
+body.dark-theme .benefício p {
+    color: #ccc !important;
+}
+
+body.dark-theme .fala-gerente {
+    background: linear-gradient(135deg, #d87c19, #988200) !important;
+    color: #fff !important;
+    box-shadow: 0 2px 6px rgba(255, 165, 0, 0.5) !important;
+}
+
+body.dark-theme .ésobre {
+    background: linear-gradient(135deg, #0f0e17, #0f0d19); /* Cor de fundo do sobre nós */
+    color: #ddd !important;
+}
+
+body.dark-theme .sobre-box {
+    background-color: #3a3a3a !important; /* Cor de fundo dos boxes lá do sobre nós */
+    box-shadow: 0 2px 6px rgba(255, 165, 0, 0.3) !important;
+}
+
+body.dark-theme .gerente-info h4 {
+    color: #f0a040 !important;
+}
+
+body.dark-theme .gerente-info p {
+    color: #ccc !important;
+}
+
+/* Botão de Alternância de Tema */
+.theme-toggle-button {
+    background-color: transparent;
+    border: none;
+    color: #f0a040;
+    font-size: 1.3rem;
+    cursor: pointer;
+    padding: 0;
+    margin-left: 0.5rem;
+}
+
+.theme-toggle-button:hover {
+    color: #ffb347;
+}
+
