@@ -13,7 +13,7 @@ document.getElementById('cadastroForm').addEventListener('submit', function(even
     const estado = this.estado.value.trim();
     const bairro = this.bairro.value.trim();
     const numero = this.número.value.trim();
-    const complemento = this.complemento.value.trim();
+    const complemento = this.complemento ? this.complemento.value.trim() : '';
     const senha = this.senha.value;
     const confirmacao = this.confirmacao.value;
 
